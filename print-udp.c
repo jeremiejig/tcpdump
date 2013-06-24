@@ -55,6 +55,7 @@ static const char rcsid[] _U_ =
 #include "nameser.h"
 #include "nfs.h"
 #include "bootp.h"
+#include "lisp.h"
 
 struct rtcphdr {
 	u_int16_t rh_flags;	/* T:2 P:1 CNT:5 PT:8 */
@@ -678,6 +679,10 @@ udp_print(register const u_char *bp, u_int length,
 			otv_print((const u_char *)(up + 1), length);
                 else if (ISPORT(VXLAN_PORT))
 			vxlan_print((const u_char *)(up + 1), length);
+		else if (ISPORT(LISP_DATA_PORT))
+			lisp_print((const u_char *)(up + 1), length, 0);
+		else if (ISPORT(LISP_CONTROL_PORT))
+			lisp_print((const u_char *)(up + 1), length, 1);
 		else
 			(void)printf("UDP, length %u",
 			    (u_int32_t)(ulen - sizeof(*up)));

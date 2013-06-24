@@ -330,6 +330,7 @@ extern u_int usb_linux_48_byte_print(const struct pcap_pkthdr *, const u_char *)
 extern u_int usb_linux_64_byte_print(const struct pcap_pkthdr *, const u_char *);
 extern void vxlan_print(const u_char *, u_int);
 extern void otv_print(const u_char *, u_int);
+extern void lisp_print(const u_char *, u_int, int);
 
 
 #ifdef INET6
