@@ -1366,6 +1366,13 @@ main(int argc, char **argv)
 	}
 	if (infile)
 		cmdbuf = read_infile(infile);
+	else if(!strcmp("lisp",argv[optind])){
+		if(!(cmdbuf = malloc(sizeof(char)*35))){
+			printf("malloc failed for lisp");
+			exit(1);
+		}
+		strcpy(cmdbuf,"udp && (port 4341 || port 4342)");
+	}
 	else
 		cmdbuf = copy_argv(&argv[optind]);
 
