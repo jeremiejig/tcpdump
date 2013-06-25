@@ -1,11 +1,10 @@
 #ifndef lisp_h
 #define lisp_h
 		
-#include "lisp-Map-Register.h"
-#include "lisp-Map-Reply.h"
-#include "lisp-Map-request.h"
+#include "lisp_Map_Register.h"
+#include "lisp_Map_Reply.h"
+#include "lisp_Map_request.h"
 
-#endif
 struct lisp {
 	
 
@@ -33,3 +32,4 @@ struct lisp {
 
 
 
+#endif
