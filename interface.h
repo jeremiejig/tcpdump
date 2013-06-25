@@ -141,6 +141,7 @@ extern void warning(const char *, ...) __attribute__ ((format (printf, 1, 2)));
 
 extern char *read_infile(char *);
 extern char *copy_argv(char **);
+#define LISP_FILTER "((port 4342 or port 4341) and udp)"
 
 extern void safeputchar(int);
 extern void safeputs(const char *, int);

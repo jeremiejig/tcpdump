@@ -519,8 +519,14 @@ copy_argv(register char **argv)
 	if (*p == 0)
 		return 0;
 
-	while (*p)
-		len += strlen(*p++) + 1;
+	while (*p){
+		if(strcmp(*p,"lisp")==0){
+			
+			len += strlen(LISP_FILTER) + 1;
+			*p++;
+			}
+
+		else len += strlen(*p++) + 1;}
 
 	buf = (char *)malloc(len);
 	if (buf == NULL)
@@ -529,12 +535,16 @@ copy_argv(register char **argv)
 	p = argv;
 	dst = buf;
 	while ((src = *p++) != NULL) {
+		if(strcmp(src,"lisp")==0){
+			src=malloc(sizeof(LISP_FILTER));
+			strcpy(src,LISP_FILTER);
+		}
 		while ((*dst++ = *src++) != '\0')
 			;
 		dst[-1] = ' ';
 	}
 	dst[-1] = '\0';
-
+	
 	return buf;
 }
 

@@ -26,6 +26,7 @@ struct lisp {
 /*
  * LISP port numbers, data and control.
  */
+#define LISP_FILTER "((port 4342 or port 4341) and udp)"
 #define	LISP_DATA_PORT		4341
 #define	LISP_CONTROL_PORT	4342
 
