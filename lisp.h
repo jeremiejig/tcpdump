@@ -4,6 +4,7 @@
 #include "lisp_Map_Register.h"
 #include "lisp_Map_Reply.h"
 #include "lisp_Map_request.h"
+#include "ip.h"
 
 struct lisp {
 	
@@ -18,8 +19,7 @@ struct lisp {
 					u_int24_t	lp_Nonce;*/	
 	u_int32_t	lp_id;	
 	
-	struct in_addr	lp_sou_eeid;	/* client IP address */
-	struct in_addr	lp_dest_eid;
+	struct ip lp_ip;
 
 } UNALIGNED;
 
