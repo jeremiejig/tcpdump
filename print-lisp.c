@@ -95,10 +95,10 @@ lispcontrol_print(register const u_char *cp, u_int length)
 				lisp_Nonce=EXTRACT_64BITS(&lisprequest->lp_Nonce);
 				lisp_Source_Eid_AFI=EXTRACT_16BITS(&lisprequest->lp_Source_EID_afi);
 				lisp_Source_Eid_add=EXTRACT_32BITS(&lisprequest->lp_Source_EID_adr);
-				if(vflag)
+				if(vflag){
 					printf(" Source_Eid %x ",lisp_Source_Eid_AFI);
 					printf(" Source_Eid_add %s ",ipaddr_string(&lisprequest->lp_Source_EID_adr));
-
+}
 				
 
 				break;
