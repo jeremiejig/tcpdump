@@ -1,6 +1,6 @@
 #include "lisp.h"
 struct lisp_Map_Reply {
-	u_int32_t Type;
+	u_int32_t lp_Type;
 
 				/*u_int4_t	lp_type;	
 				u_int1_t	lp_P;		
