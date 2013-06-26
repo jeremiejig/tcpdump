@@ -45,7 +45,7 @@ lispdata_print(register const u_char *cp, u_int length)
 //IH
 	ndo.ndo_snapend = cp+length;
 	
-	printf(" %d\n",length);
+	printf(" %d ",length);
 	ip_print(&ndo,cp+8,length-8);
 }
 void
