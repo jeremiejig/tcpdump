@@ -679,7 +679,7 @@ udp_print(register const u_char *bp, u_int length,
 			otv_print((const u_char *)(up + 1), length);
                 else if (ISPORT(VXLAN_PORT))
 			vxlan_print((const u_char *)(up + 1), length);
-		else if (ISPORT(LISP_DATA_PORT))
+		else if (ISPORT(LISP_DATA_PORT))//modifation
 			lisp_print((const u_char *)(up + 1), length, 0);
 		else if (ISPORT(LISP_CONTROL_PORT))
 			lisp_print((const u_char *)(up + 1), length, 1);

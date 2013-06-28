@@ -141,7 +141,7 @@ extern void warning(const char *, ...) __attribute__ ((format (printf, 1, 2)));
 
 extern char *read_infile(char *);
 extern char *copy_argv(char **);
-#define LISP_FILTER "((port 4342 or port 4341) and udp)"
+#define LISP_FILTER "((port 4342 or port 4341) and udp)"//modification
 
 extern void safeputchar(int);
 extern void safeputs(const char *, int);
@@ -331,7 +331,7 @@ extern u_int usb_linux_48_byte_print(const struct pcap_pkthdr *, const u_char *)
 extern u_int usb_linux_64_byte_print(const struct pcap_pkthdr *, const u_char *);
 extern void vxlan_print(const u_char *, u_int);
 extern void otv_print(const u_char *, u_int);
-extern void lisp_print(const u_char *, u_int, int);
+extern void lisp_print(const u_char *, u_int, int);//modification
 
 
 #ifdef INET6
